@@ -12,15 +12,18 @@
   --grey: #888888;
   --lbrown: #f7f3ef;
 }
-body {
+.bcsc {
+  position: fixed;
+  z-index: 1;
+  background: white;
   display: flex;
   justify-content: center;
-  align-items: center;
-}
-body div:nth-child(1) {
-  height: 99vh;
-  width: 99vw;
+  align-items: flex-start;
+  min-height: 80vh;
+  width: 100%;
   border: 1px dashed red;
+  visibility: hidden;
+  opacity: 0;
 }
 #section1 {
   height: 90px;
@@ -48,13 +51,38 @@ body div:nth-child(1) {
   color: white;
   border-radius: 30px;
   font-family: Roboto;
-  line-height: 20px;
+  line-height: 18px;
   position: absolute;
-  top: 38px;
-  right: 120px;
+  top: 15px;
+  right: -1px;
+  cursor: pointer;
+}
+#total > span{
+   display: block;
+   font-size: 10pt;
 }
 #title {
   font-family: arial !important;
   width: 571px !important;
   font-size: 18pt !important;
+}
+#prmbuy{
+  cursor: pointer !important;
+}
+#productsnbr{
+  width: 12px;
+height: 12px;
+background-color: var(--maincolor);
+display: flex;
+justify-content: center;
+align-content: center;
+color: white;
+border-radius: 30px;
+font-family: Roboto;
+line-height: 13px;
+position: absolute;
+top: 5px;
+right: 65px;
+cursor: pointer;
+font-size: 7pt;
 }

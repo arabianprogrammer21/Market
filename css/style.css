@@ -37,6 +37,9 @@ header .header-container{
     text-decoration: none;
     text-transform: capitalize;
 }
+.login{
+    position: relative;
+}
 .login ul li{
     display: inline-block;
 }
@@ -633,6 +636,7 @@ header{
     justify-content: space-evenly;
     opacity: 0;
     transition: opacity .7s;
+    z-index: 1;
 }
 .chair-product > div:hover .isq{
     opacity: 1;
@@ -652,7 +656,9 @@ header{
     transform: translate(-50%,-50%);
     font-size: 20px;
 }
-
+#wsh{
+    cursor: pointer;
+}
 
 
 

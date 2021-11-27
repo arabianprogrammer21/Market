@@ -8,13 +8,31 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Market</title>
         <link rel="stylesheet" href="./css/reset.css">
+        <link rel="stylesheet" href="./css/shopppingcart.css">
         <link rel="stylesheet" href="./css/style.css">
         <link href="https://kit-pro.fontawesome.com/releases/v5.15.3/css/pro.min.css" rel="stylesheet">
 
     </head>
 
-
 <body id="bd">
+    <div class="bcsc">
+        <section id="section1">
+            <div>
+                <a href="#"><img src="images/logo.png" alt=""></a>
+            </div>
+            <div id="title">
+                <h2>Shopping Cart</h2>
+            </div>
+            <div>
+                <div style="position: relative;">
+                    <i style="cursor: pointer;" ; onclick="bevisible()" ; class="fal fa-shopping-cart fa-2x"></i>
+                    <section id="total">
+                        <span>0</span>
+                    </section>
+                </div>
+            </div>
+        </section>
+    </div>
     <!-- header -->
     <header>
         <div class="container">
@@ -70,7 +88,8 @@
                     <ul>
                         <li><i class="fal fa-search 3x"></i></li>
                         <li><i class="fal fa-user"></i></li>
-                        <li><a href="html/shoppingcart.html"><i class="fal fa-shopping-bag"></i>My Bag</a></li>
+                        <li id="prmbuy" onclick="wsh()"><i class="fal fa-shopping-cart"></i>My Bag</li>
+                        <div id="productsnbr"></div>
                     </ul>
                 </div>
                 <!--login-->
@@ -267,11 +286,11 @@
                         <div class="img-product">
                             <div class="hv-ch">
                                 <img src="./images/chair6.jpg" alt="">
-                                <div class="isq">
-                                    <div class="isq-wi"><a href="#"> <i class="fal fa-heart"></i> </a></div>
-                                    <div class="isq-wi"><a href="#"> <i class="fal fa-eye"></i> </a></div>
-                                    <div class="isq-wi"><a href="#"> <i class="fal fa-align-justify"></i> </a></div>
-                                    <div class="isq-wi"><a href="#"> <i class="fal fa-cart-arrow-down"></i> </a></div>
+                                <div style="z-index: 1;" class="isq">
+                                    <div class="isq-wi"><i class="fal fa-heart"></i></div>
+                                    <div class="isq-wi"><i class="fal fa-eye"></i></div>
+                                    <div class="isq-wi"><i class="fal fa-align-justify"></i></div>
+                                    <div id="wsh" class="isq-wi"><i class="fal fa-cart-arrow-down"></i></div>
                                 </div>
                             </div>
                             <img src="./images/chair1.jpg" alt="">
@@ -295,10 +314,10 @@
                             <div class="hv-ch">
                                 <img src="./images/chair5.jpg" alt="">
                                 <div class="isq">
-                                    <div class="isq-wi"><a href="#"> <i class="fal fa-heart"></i> </a></div>
-                                    <div class="isq-wi"><a href="#"> <i class="fal fa-eye"></i> </a></div>
-                                    <div class="isq-wi"><a href="#"> <i class="fal fa-align-justify"></i> </a></div>
-                                    <div class="isq-wi"><a href="#"> <i class="fal fa-cart-arrow-down"></i> </a></div>
+                                    <div class="isq-wi"><i class="fal fa-heart"></i></div>
+                                    <div class="isq-wi"><i class="fal fa-eye"></i></div>
+                                    <div class="isq-wi"><i class="fal fa-align-justify"></i></div>
+                                    <div id="wsh" class="isq-wi"><i class="fal fa-cart-arrow-down"></i></div>
                                 </div>
                             </div>
                             <img src="./images/chair2.jpg" alt="">
@@ -322,10 +341,10 @@
                             <div class="hv-ch">
                                 <img src="./images/chair4.jpg" alt="">
                                 <div class="isq">
-                                    <div class="isq-wi"><a href="#"> <i class="fal fa-heart"></i> </a></div>
-                                    <div class="isq-wi"><a href="#"> <i class="fal fa-eye"></i> </a></div>
-                                    <div class="isq-wi"><a href="#"> <i class="fal fa-align-justify"></i> </a></div>
-                                    <div class="isq-wi"><a href="#"> <i class="fal fa-cart-arrow-down"></i> </a></div>
+                                    <div class="isq-wi"><i class="fal fa-heart"></i></div>
+                                    <div class="isq-wi"><i class="fal fa-eye"></i></div>
+                                    <div class="isq-wi"><i class="fal fa-align-justify"></i></div>
+                                    <div id="wsh" class="isq-wi"><i class="fal fa-cart-arrow-down"></i></div>
                                 </div>
                             </div>
                             <img src="./images/chair3.jpg" alt="">
@@ -349,10 +368,10 @@
                             <div class="hv-ch">
                                 <img src="./images/chair3.jpg" alt="">
                                 <div class="isq">
-                                    <div class="isq-wi"><a href="#"> <i class="fal fa-heart"></i> </a></div>
-                                    <div class="isq-wi"><a href="#"> <i class="fal fa-eye"></i> </a></div>
-                                    <div class="isq-wi"><a href="#"> <i class="fal fa-align-justify"></i> </a></div>
-                                    <div class="isq-wi"><a href="#"> <i class="fal fa-cart-arrow-down"></i> </a></div>
+                                    <div class="isq-wi"><i class="fal fa-heart"></i></div>
+                                    <div class="isq-wi"><i class="fal fa-eye"></i></div>
+                                    <div class="isq-wi"><i class="fal fa-align-justify"></i></div>
+                                    <div id="wsh" class="isq-wi"><i class="fal fa-cart-arrow-down"></i></div>
                                 </div>
                             </div>
                             <img src="./images/chair4.jpg" alt="">
@@ -376,10 +395,10 @@
                             <div class="hv-ch">
                                 <img src="./images/chair2.jpg" alt="">
                                 <div class="isq">
-                                    <div class="isq-wi"><a href="#"> <i class="fal fa-heart"></i> </a></div>
-                                    <div class="isq-wi"><a href="#"> <i class="fal fa-eye"></i> </a></div>
-                                    <div class="isq-wi"><a href="#"> <i class="fal fa-align-justify"></i> </a></div>
-                                    <div class="isq-wi"><a href="#"> <i class="fal fa-cart-arrow-down"></i> </a></div>
+                                    <div class="isq-wi"><i class="fal fa-heart"></i></div>
+                                    <div class="isq-wi"><i class="fal fa-eye"></i></div>
+                                    <div class="isq-wi"><i class="fal fa-align-justify"></i></div>
+                                    <div id="wsh" class="isq-wi"><i class="fal fa-cart-arrow-down"></i></div>
                                 </div>
                             </div>
                             <img src="./images/chair5.jpg" alt="">
@@ -403,10 +422,10 @@
                             <div class="hv-ch">
                                 <img src="./images/chair1.jpg" alt="">
                                 <div class="isq">
-                                    <div class="isq-wi"><a href="#"> <i class="fal fa-heart"></i> </a></div>
-                                    <div class="isq-wi"><a href="#"> <i class="fal fa-eye"></i> </a></div>
-                                    <div class="isq-wi"><a href="#"> <i class="fal fa-align-justify"></i> </a></div>
-                                    <div class="isq-wi"><a href="#"> <i class="fal fa-cart-arrow-down"></i> </a></div>
+                                    <div class="isq-wi"><i class="fal fa-heart"></i></div>
+                                    <div class="isq-wi"><i class="fal fa-eye"></i></div>
+                                    <div class="isq-wi"><i class="fal fa-align-justify"></i></div>
+                                    <div id="wsh" class="isq-wi"><i class="fal fa-cart-arrow-down"></i></div>
                                 </div>
                             </div>
                             <img src="./images/chair6.jpg" alt="">
@@ -446,7 +465,8 @@
                     <div class="div-msgsc">
                         <p> The standard Lorem Ipsum passage, used since the 1500s"Lorem ipsum dolor sit amet,
                             consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-                            aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                            aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                            aliquip
                             ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
                             cillum dolore eu fugiat nulla pariatur. Excepteur ... </p>
                     </div>
